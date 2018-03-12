@@ -1,0 +1,10 @@
+.idea/
+dist/
+.npm/
+lerna-debug.log
+yarn-error.log
+node_modules/
+webpack3/node_modules/
+webpack4/node_modules/
+webpack3/dist/
+webpack4/dist/
