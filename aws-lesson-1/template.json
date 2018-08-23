@@ -1,0 +1,36 @@
+{
+  "Resources": {
+    "SunJingInstance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-47c21a25",
+        "InstanceType": "t2.micro",
+        "SecurityGroups": [{
+          "Ref": "SunJingSecurityGroup"
+        }]
+      }
+    },
+    "SunJingSecurityGroup": {
+      "Type": "AWS::EC2::SecurityGroup",
+      "GroupDescription": "Enable SSH access via port 22, and HTTP access via port 80",
+      "Properties": {
+        "SecurityGroupIngress" : [
+          {
+            "IpProtocol": "TCP",
+            "FromPort": "80"
+          }
+        ]
+      }
+    },
+    "SunJingRoute": {
+      "Type": "AWS::Route53::RecordSet",
+      "Properties": {
+        "HostedZoneName" : "cloudpatterns.info.",
+        "Name": "sunjing.test.com",
+        "Type" : "A",
+        "TTL" : "900",
+        "ResourceRecords" : [ { "Fn::GetAtt" : ["SunJingInstance", "PublicIp"] } ]
+      }
+    }
+  }
+}
