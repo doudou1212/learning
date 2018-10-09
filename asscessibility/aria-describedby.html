@@ -2,9 +2,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>Accessibility</title>
 </head>
 <body>
-$END$
+<label for="pw">Password:</label>
+<input type="password" id="pw" aria-describedby="pw-help"/>
+<div id="pw-help">
+    Password must be at least 12 characters.
+</div>
+
 </body>
 </html>
