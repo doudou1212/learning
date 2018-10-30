@@ -1,0 +1,11 @@
+[2018-10-11T16:15:08,954][INFO ][o.e.x.m.MlDailyMaintenanceService] triggering scheduled [ML] maintenance tasks
+[2018-10-11T16:15:09,464][INFO ][o.e.x.m.a.TransportDeleteExpiredDataAction] [gi-Zjr2] Deleting expired data
+[2018-10-11T16:15:09,536][INFO ][o.e.x.m.a.TransportDeleteExpiredDataAction] [gi-Zjr2] Completed deletion of expired data
+[2018-10-11T16:15:09,540][INFO ][o.e.x.m.MlDailyMaintenanceService] Successfully completed [ML] maintenance tasks
+[2018-10-11T16:15:09,636][INFO ][o.e.m.j.JvmGcMonitorService] [gi-Zjr2] [gc][63318] overhead, spent [323ms] collecting in the last [1s]
+[2018-10-11T16:27:08,529][INFO ][o.e.x.m.j.p.NativeController] Native controller process has stopped - no new native processes can be started
+[2018-10-11T16:27:08,575][INFO ][o.e.n.Node               ] [gi-Zjr2] stopping ...
+[2018-10-11T16:27:08,867][INFO ][o.e.x.w.WatcherService   ] [gi-Zjr2] stopping watch service, reason [shutdown initiated]
+[2018-10-11T16:27:09,359][INFO ][o.e.n.Node               ] [gi-Zjr2] stopped
+[2018-10-11T16:27:09,360][INFO ][o.e.n.Node               ] [gi-Zjr2] closing ...
+[2018-10-11T16:27:09,462][INFO ][o.e.n.Node               ] [gi-Zjr2] closed
