@@ -312,3 +312,12 @@ const MyStyledComponent = styled(AlreadyStyledComponent)`
   font-weight: bold;
 }
 ```
+
+#### Why do my DOM nodes have two classes?
+.sc-fVOeaW static class name, 即使一个styled component没有被attach任何的styled，也会有这个class，表明这是一个styled 
+component，方便在devtool中查看。
+
+.fVOeaW 没有sc这样的前缀，dynamic class name，attach了style，每一个element的dynamic class name都不一样
+
+#### When to use attrs?
+当你希望一个styled component的所有instance上都有某些固定的attr时，可以将这些attr attach到styled component上
