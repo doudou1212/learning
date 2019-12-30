@@ -1,0 +1,10 @@
+{
+  "name": "swagger-ui",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "swagger-ui": "^3.24.3"
+  },
+  "scripts": {},
+  "devDependencies": {}
+}
