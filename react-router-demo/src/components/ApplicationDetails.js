@@ -13,7 +13,7 @@ const AboutUs = styled.div`
 `
 
 // const About = () => <AboutUs>Welcome to rent customer!</AboutUs>
-class About extends React.Component {
+class ApplicationDetails extends React.Component {
   componentDidMount() {
     console.log("About component did mount")
   }
@@ -26,4 +26,4 @@ class About extends React.Component {
     return (<AboutUs>Welcome to rent customer!</AboutUs>)
   }
 }
-export default About
+export default ApplicationDetails

@@ -1,27 +1,17 @@
 'use strict';
 
-const { graphql, buildSchema } = require('graphql');
+const {ApolloServer} = require("apollo-server")
+const {getApplicationsByListingId, getApplicationDetailsByApplicationId} = require("./resolvers/applications")
+const typeDefs = require("./schemas/typeDefs")
+const ApplicationsAPI = require("./datasources/applicationManagementAPI")
+const resolvers = require("./resolvers/applications")
 
-const Query = `type Query {
-  foo: String
-}`;
+const dataSources = () => ({
+  ApplicationsAPI: new ApplicationsAPI()
+})
 
-const Schema = `type Schema {
-  query: Query
-}`;
+const server = new ApolloServer({typeDefs, resolvers, dataSources})
 
-const schema = buildSchema(Query, Schema);
-
-const query = `
-query myFirstQuery {
-foo
-}
-`;
-
-const resolvers = {
-  foo: () => 'bar'
-};
-
-graphql(schema, query,resolvers)
-  .then((data) => {console.log(data)})
-  .catch((err) => {console.log(err)});
+server.listen({port: 4001}).then(({url}) => {
+  console.log(`🚀  Server ready at ${url}`);
+});
