@@ -15,16 +15,16 @@
             votes: 0
         }),
         created: async function() {
-          const result = await fetch("http://localhost:8081/votes/1").then(res => res.json());
+          const result = await fetch("http://0.0.0.0:8081/votes/1").then(res => res.json());
           this.votes = result.vote;
         },
         methods: {
             async addVote() {
-                await fetch("http://localhost:8081/votes/add",
+                await fetch("http://0.0.0.0:8081/votes/add",
                     {
                         method: 'POST'
                     });
-                const result = await fetch("http://localhost:8081/votes/1").then(res => res.json());
+                const result = await fetch("http://0.0.0.0:8081/votes/1").then(res => res.json());
                 this.votes = result.vote;
             }
         }
